@@ -1,4 +1,4 @@
 
 class WordWrap:
-  def apply(self):
-    pass
+  def apply(self, expression):
+    return expression
