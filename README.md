@@ -1,3 +1,3 @@
-# Kata Word Wrap
+# Kata Word Wrap - Python
 
-En las diferentes ramas de este repositorio se podrán encontrar las implementaciones realizadas de la [Kata Word Wrap](https://codingdojo.org/kata/WordWrap/)
+En esta rama se puede encontrar una implementación de la [Kata Word Wrap](https://codingdojo.org/kata/WordWrap/) realizada en Python
