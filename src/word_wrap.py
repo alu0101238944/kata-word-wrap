@@ -3,11 +3,21 @@ class WordWrap:
   def apply(self, expression, n_columns):
     if n_columns > len(expression):
       return expression
+
     parsedString = list(expression[:n_columns])
     i = n_columns - 1
     while i > 0:
       if parsedString[i] == ' ':
+        j = i - 1
+        while j > 0 and parsedString[j] == ' ':
+          print(parsedString, j)
+          parsedString = parsedString[:j]
+          j -= 1
         parsedString[i] = '\n'
-        return ''.join(parsedString) + self.apply(expression[n_columns:], n_columns)
+        remainder = ''.join(parsedString[i + 1:]) + expression[len(parsedString):]
+        return ''.join(parsedString[:i + 1]) + \
+            self.apply(remainder, n_columns)
       i -= 1
-    return ''.join(parsedString) + '\n' + self.apply(expression[n_columns:], n_columns)
+
+    remainder = expression[len(parsedString):]
+    return ''.join(parsedString) + '\n' + self.apply(remainder, n_columns)
