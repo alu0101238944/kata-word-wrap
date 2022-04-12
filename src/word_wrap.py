@@ -4,6 +4,9 @@ class WordWrap:
     if n_columns > len(expression):
       return expression
 
+    while expression[0] == ' ':
+      expression = expression[1:]
+
     parsedString = list(expression[:n_columns])
     i = n_columns - 1
     while i > 0:
