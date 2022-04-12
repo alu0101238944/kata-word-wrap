@@ -18,8 +18,7 @@ class WordWrap:
           j -= 1
         parsedString[i] = '\n'
         remainder = ''.join(parsedString[i + 1:]) + expression[len(parsedString):]
-        return ''.join(parsedString[:i + 1]) + \
-            self.apply(remainder, n_columns)
+        return ''.join(parsedString[:i + 1]) + self.apply(remainder, n_columns)
       i -= 1
 
     remainder = expression[len(parsedString):]

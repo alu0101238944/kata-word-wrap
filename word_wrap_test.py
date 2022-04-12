@@ -20,7 +20,7 @@ class WordWrapTests(unittest.TestCase):
     self.assertEqual(self.wordWrap.apply('1 234 56 7890 123 4 567890 1234', 10), '1 234 56\n7890 123\n4 567890\n1234')
     self.assertEqual(self.wordWrap.apply('012345678901234', 6), '012345\n678901\n234')
     self.assertEqual(self.wordWrap.apply('greedy whenthewordistoolong', 6), 'greedy\nwhenth\newordi\nstoolo\nng')
-    # self.assertEqual(self.wordWrap.apply('greedy whenthewordistoolong', 7), 'greedy\nwhenthe\nwordist\noolong')
+    self.assertEqual(self.wordWrap.apply('greedy whenthewordistoolong', 7), 'greedy\nwhenthe\nwordist\noolong')
 
 if __name__ == '__main__':
   unittest.main()
